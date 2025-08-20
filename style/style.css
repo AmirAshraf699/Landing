@@ -113,8 +113,8 @@ header .links ul li a:hover {
 @media (max-width: 991) {
     header .links ul li a {
 
-    padding: 0 15px;
-}
+        padding: 0 15px;
+    }
 
 }
 
@@ -476,6 +476,10 @@ header .links ul li a:hover {
     margin-bottom: 10px;
 }
 
+.discount .discount-content .discount-offers ul li span {
+    font-weight: bold;
+}
+
 .discount .discount-content .discount-offers ul li i {
     color: var(--blue-darker);
     margin-right: 10px;
@@ -490,6 +494,19 @@ header .links ul li a:hover {
     border-radius: 10px;
 }
 
+.discount .discount-content .discount-offers a {
+    display: block;
+    background-color: var(--blue-darker);
+    color: white;
+    padding: 10px 0;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.discount .discount-content .discount-offers a:hover {
+    color: var(--yellow);
+}
+
 @media (max-width: 991px) {
     .discount .discount-content .discount-image {
         display: none;
@@ -499,6 +516,10 @@ header .links ul li a:hover {
 @media (max-width: 767px) {
     .discount .discount-content .discount-offers {
         padding: 20px;
+    }
+
+    .discount .discount-content .discount-offers ul li {
+        font-size: 14px;
     }
 }
 
@@ -957,6 +978,11 @@ header .links ul li a:hover {
     border-radius: 15px;
     color: white;
     font-size: 20px;
+    transition: var(--transition);
+}
+
+.buy a:hover {
+    transform: scale(1.1);
 }
 
 @media (max-width: 767px) {
@@ -965,7 +991,7 @@ header .links ul li a:hover {
     }
 
     .buy a {
-        width: 100%;
+        width: 95%;
         padding: 20px 0;
     }
 }
