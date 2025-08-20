@@ -232,7 +232,7 @@ header .links ul li a:hover {
 .about p {
     color: var(--black-three);
     font-size: 22px;
-    margin: 0;
+    margin-bottom: 20px;
     margin-top: 15px;
 }
 
@@ -717,248 +717,248 @@ header .links ul li a:hover {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 
     }
+}
 
-    /* FAQ */
+/* FAQ */
 
-    .faq {
-        position: relative;
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
+.faq {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
 
+.faq h3 {
+    text-align: center;
+    color: var(--black-two);
+    font-size: 35px;
+}
+
+.faq .faq-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 50px;
+}
+
+.faq .faq-cards .faq-card {
+    background-color: var(--blue-light);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq .faq-cards .faq-card::before,
+.faq .faq-cards .faq-card::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background-color: var(--blue-darker);
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.faq .faq-cards .faq-card::before {
+    left: -100%;
+}
+
+.faq .faq-cards .faq-card::after {
+    right: -100%;
+}
+
+.faq .faq-cards .faq-card:hover::before {
+    left: 0;
+}
+
+.faq .faq-cards .faq-card:hover::after {
+    right: 0;
+}
+
+.faq .faq-cards .faq-card:hover .faq-desc {
+    color: white;
+}
+
+.faq .faq-cards .faq-card .faq-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    position: relative;
+    z-index: 3;
+}
+
+
+
+.faq .faq-cards .faq-card .faq-icon i {
+    font-size: 30px;
+    color: var(--green);
+}
+
+.faq .faq-cards .faq-card .faq-desc {
+    margin-top: 30px;
+    color: var(--black-three);
+    font-weight: bold;
+    position: relative;
+    z-index: 3;
+    transition: var(--transition);
+}
+
+@media (max-width: 767px) {
     .faq h3 {
-        text-align: center;
-        color: var(--black-two);
-        font-size: 35px;
+        font-size: 25px;
     }
+}
 
-    .faq .faq-cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 50px;
-    }
+/* Trust Badges */
 
-    .faq .faq-cards .faq-card {
-        background-color: var(--blue-light);
-        padding: 20px;
-        border-radius: 15px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-        transition: var(--transition);
-    }
+.trust {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--blue-light);
+}
 
-    .faq .faq-cards .faq-card::before,
-    .faq .faq-cards .faq-card::after {
-        position: absolute;
-        content: "";
-        top: 0;
-        width: 51%;
-        height: 100%;
-        background-color: var(--blue-darker);
-        z-index: 1;
-        transition: var(--transition);
-    }
+.trust .trust-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+}
 
-    .faq .faq-cards .faq-card::before {
-        left: -100%;
-    }
+.trust .trust-cards .trust-card {
+    text-align: center;
+}
 
-    .faq .faq-cards .faq-card::after {
-        right: -100%;
-    }
-
-    .faq .faq-cards .faq-card:hover::before {
-        left: 0;
-    }
-
-    .faq .faq-cards .faq-card:hover::after {
-        right: 0;
-    }
-
-    .faq .faq-cards .faq-card:hover .faq-desc {
-        color: white;
-    }
-
-    .faq .faq-cards .faq-card .faq-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: white;
-        width: 100px;
-        height: 100px;
-        margin: 0 auto;
-        border-radius: 50%;
-        position: relative;
-        z-index: 3;
-    }
+.trust .trust-cards .trust-card img {
+    width: 150px;
+    height: 150px;
+}
 
 
+.trust .trust-cards .trust-card p {
+    color: var(--black-three);
+    margin-bottom: 0;
+}
 
-    .faq .faq-cards .faq-card .faq-icon i {
-        font-size: 30px;
-        color: var(--green);
-    }
+/* Pricing */
 
-    .faq .faq-cards .faq-card .faq-desc {
-        margin-top: 30px;
-        color: var(--black-three);
-        font-weight: bold;
-        position: relative;
-        z-index: 3;
-        transition: var(--transition);
-    }
+.pricing {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
 
-    @media (max-width: 767px) {
-        .faq h3 {
-            font-size: 25px;
-        }
-    }
-
-    /* Trust Badges */
-
-    .trust {
-        position: relative;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        background-color: var(--blue-light);
-    }
-
-    .trust .trust-cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 50px;
-    }
-
-    .trust .trust-cards .trust-card {
-        text-align: center;
-    }
-
-    .trust .trust-cards .trust-card img {
-        width: 150px;
-        height: 150px;
-    }
+.pricing h3 {
+    text-align: center;
+    color: var(--black-two);
+    font-size: 35px;
+}
 
 
-    .trust .trust-cards .trust-card p {
-        color: var(--black-three);
-        margin-bottom: 0;
-    }
+.pricing .pricing-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
 
-    /* Pricing */
+.pricing .pricing-content .pricing-card {
+    box-shadow: 0 0 10px 3px var(--blue);
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+}
 
-    .pricing {
-        position: relative;
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
+.pricing .pricing-content .pricing-card h4 {
+    font-size: 20px;
+    color: var(--black-two);
+    margin-top: 10px;
+}
 
+.pricing .pricing-content .pricing-card .number {
+    color: var(--green);
+    border-top: 1px solid var(--grey);
+    padding-top: 20px;
+}
+
+.pricing .pricing-content .pricing-card .price {
+    color: var(--red);
+}
+
+.pricing .pricing-content .pricing-card ul {
+    padding: 0;
+    padding-top: 20px;
+    border-top: 1px solid var(--grey);
+}
+
+.pricing .pricing-content .pricing-card ul li {
+    margin-bottom: 10px;
+}
+
+.pricing .pricing-content .pricing-card ul li i {
+    margin-right: 10px;
+}
+
+.pricing .pricing-content .pricing-card ul li i.fail {
+    color: var(--red);
+}
+
+.pricing .pricing-content .pricing-card ul li i.success {
+    color: var(--green);
+}
+
+@media (max-width: 767px) {
     .pricing h3 {
-        text-align: center;
-        color: var(--black-two);
-        font-size: 35px;
+        font-size: 25px;
     }
+}
 
+/* Buy */
 
-    .pricing .pricing-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 30px;
-    }
+.buy {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: var(--blue-light);
+    text-align: center;
+}
 
-    .pricing .pricing-content .pricing-card {
-        box-shadow: 0 0 10px 3px var(--blue);
-        border-radius: 15px;
-        text-align: center;
-        padding: 20px;
-    }
+.buy h3 {
+    font-size: 60px;
+    color: var(--blue-darker);
+    margin-bottom: 20px;
+}
 
-    .pricing .pricing-content .pricing-card h4 {
-        font-size: 20px;
-        color: var(--black-two);
-        margin-top: 10px;
-    }
+.buy p {
+    font-size: 35px;
+    color: var(--green);
+    font-weight: bold;
+}
 
-    .pricing .pricing-content .pricing-card .number {
-        color: var(--green);
-        border-top: 1px solid var(--grey);
-        padding-top: 20px;
-    }
+.buy a {
+    display: block;
+    background-color: var(--blue-darker);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 20px 150px;
+    border-radius: 15px;
+    color: white;
+    font-size: 20px;
+}
 
-    .pricing .pricing-content .pricing-card .price {
-        color: var(--red);
-    }
-
-    .pricing .pricing-content .pricing-card ul {
-        padding: 0;
-        padding-top: 20px;
-        border-top: 1px solid var(--grey);
-    }
-
-    .pricing .pricing-content .pricing-card ul li {
-        margin-bottom: 10px;
-    }
-
-    .pricing .pricing-content .pricing-card ul li i {
-        margin-right: 10px;
-    }
-
-    .pricing .pricing-content .pricing-card ul li i.fail {
-        color: var(--red);
-    }
-
-    .pricing .pricing-content .pricing-card ul li i.success {
-        color: var(--green);
-    }
-
-    @media (max-width: 767px) {
-        .pricing h3 {
-            font-size: 25px;
-        }
-    }
-
-    /* Buy */
-
-    .buy {
-        position: relative;
-        padding-top: 100px;
-        padding-bottom: 100px;
-        background-color: var(--blue-light);
-        text-align: center;
-    }
-
-    .buy h3 {
-        font-size: 60px;
-        color: var(--blue-darker);
-        margin-bottom: 20px;
-    }
-
+@media (max-width: 767px) {
     .buy p {
-        font-size: 35px;
-        color: var(--green);
-        font-weight: bold;
+        font-size: 25px;
     }
 
     .buy a {
-        display: block;
-        background-color: var(--blue-darker);
-        width: fit-content;
-        margin: 0 auto;
-        padding: 20px 150px;
-        border-radius: 15px;
-        color: white;
-        font-size: 20px;
-    }
-
-    @media (max-width: 767px) {
-        .buy p {
-            font-size: 25px;
-        }
-
-        .buy a {
-            width: 100%;
-            padding: 20px 0;
-        }
+        width: 100%;
+        padding: 20px 0;
     }
 }
 
