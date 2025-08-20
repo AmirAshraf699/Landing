@@ -93,6 +93,7 @@ header .links ul {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    padding-left: 0;
 }
 
 header .links ul li a {
@@ -130,6 +131,7 @@ header .links ul li a:hover {
 
     header .links ul li a {
         width: 60px;
+        font-size: 13px;
     }
 
 }
@@ -710,6 +712,10 @@ header .links ul li a:hover {
     .testimonials p {
         font-size: 20px;
     }
+
+    .testimonials .tesi-cards {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  
 }
 
 /* FAQ */
