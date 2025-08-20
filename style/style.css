@@ -112,6 +112,7 @@ header .links ul li a:hover {
 @media (max-width: 767px) {
     header.header {
         height: 100px;
+        width: 100%;
     }
 
     header .container {
@@ -202,6 +203,12 @@ header .links ul li a:hover {
 
 .hero-panal .hero-content .hero-content-link:hover {
     transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+    .hero-panal .hero-content {
+        width: 95%;
+    }
 }
 
 /* About us */
